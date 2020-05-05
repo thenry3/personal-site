@@ -36,6 +36,9 @@ const Title = styled("div")`
   font-size: 70px;
   letter-spacing: 0.07em;
   margin-top: 10px;
+  @media only screen and (max-width: 500px) {
+    font-size: 60px;
+  }
 `;
 
 const Desc = styled("div")`
@@ -51,6 +54,9 @@ const PicWrapper = styled("div")`
   justify-content: center;
   align-items: center;
   margin-bottom: 125px;
+  @media only screen and (max-width: 500px) {
+    margin-bottom: 50px;
+  }
 `;
 
 const ConCollection = styled("div")`

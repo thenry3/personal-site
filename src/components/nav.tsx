@@ -13,12 +13,18 @@ const NavWrapper = styled("div")`
   right: 0;
   padding-top: 13px;
   padding-bottom: 13px;
+  @media only screen and (max-width: 500px) {
+    justify-content: center;
+  }
 `;
 
 const NavItems = styled("div")`
   display: flex;
   align-items: center;
   margin-right: 20px;
+  @media only screen and (max-width: 500px) {
+    margin: 0;
+  }
 `;
 
 const ScrollLink = styled(Scroll.Link)`
