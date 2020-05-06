@@ -7,7 +7,7 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 
-import mainpic from "../media/main1.jpeg";
+import mainpic from "../assets/main1.jpeg";
 
 const CoverWrapper = styled("div")`
   background: linear-gradient(200deg, #1d2b64, #f8cdda);
@@ -45,7 +45,7 @@ const Desc = styled("div")`
   color: white;
   margin-top: 10px;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 `;
 
 const PicWrapper = styled("div")`
@@ -53,7 +53,7 @@ const PicWrapper = styled("div")`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 125px;
+  margin-bottom: 120px;
   @media only screen and (max-width: 500px) {
     margin-bottom: 50px;
   }
@@ -69,11 +69,11 @@ const Contact = styled("a")`
   color: white;
   margin-left: 8px;
   margin-right: 8px;
-  padding: 4px;
+  padding: 6px;
   & > * {
     width: 30px;
     height: 30px;
-    transition: 0.2s;
+    transition: 0.13s;
   }
   &:hover {
     & > * {
@@ -98,10 +98,7 @@ export default class Cover extends React.Component {
               >
                 <AiOutlineLinkedin />
               </Contact>
-              <Contact
-                target="_blank"
-                href="https://www.linkedin.com/in/thenry3/"
-              >
+              <Contact target="_blank" href="https://github.com/thenry3/">
                 <AiOutlineGithub />
               </Contact>
               <Contact

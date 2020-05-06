@@ -13,6 +13,13 @@ const NavWrapper = styled("div")`
   right: 0;
   padding-top: 13px;
   padding-bottom: 13px;
+  transition: 0.3s;
+  background: ${(props) =>
+    props.scroll ? "#FFFFFF" : "rgba(255, 255, 255, 0)"};
+  z-index: 999;
+  box-shadow: ${(props) =>
+      props.scroll ? "rgba(0, 0, 0, 0.3)" : "rgba(0, 0, 0, 0)"}
+    0px 3px 8px;
   @media only screen and (max-width: 500px) {
     justify-content: center;
   }
@@ -25,42 +32,78 @@ const NavItems = styled("div")`
   @media only screen and (max-width: 500px) {
     margin: 0;
   }
+  z-index: inherit;
+  & > * {
+    background: ${(props) =>
+      props.scroll
+        ? "linear-gradient(90deg, #1d2b64 -50%, #f8cdda 120%)"
+        : "rgba(255, 255, 255, 0)"};
+    color: ${(props) => (props.scroll ? "rgba(255, 255, 255, 0)" : "white")};
+    ${(props) => (props.scroll ? "background-clip: text" : "")};
+    ${(props) => (props.scroll ? "-webkit-background-clip: text" : "")};
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      height: 3px;
+      margin-bottom: -3px;
+      background: ${(props) =>
+        props.scroll
+          ? "linear-gradient(90deg, #1d2b64 -50%, #f8cdda 120%)"
+          : "white"};
+      opacity: 0;
+      transition: 0.2s;
+    }
+    &:hover {
+      /* border-bottom: 3px solid white; */
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
 `;
 
 const ScrollLink = styled(Scroll.Link)`
-  transition: 0.2s;
+  transition: 0s;
   margin-left: 12px;
   margin-right: 12px;
-  padding: 10px 3px;
+  padding: 10px 5px;
   font-size: 14px;
-  border-bottom: 3px solid transparent;
+
   &:hover {
-    border-bottom: 3px solid white;
     cursor: pointer;
   }
 `;
 
 const ExtLink = styled("a")`
-  color: white;
+  ${(props) => (props.scroll ? "background-clip: text" : "")};
+  ${(props) => (props.scroll ? "-webkit-background-clip: text" : "")};
   text-decoration: none;
   transition: 0.2s;
   margin-left: 12px;
   margin-right: 12px;
   padding: 10px 3px;
   font-size: 14px;
-  border-bottom: 3px solid transparent;
+
   &:hover {
-    border-bottom: 3px solid white;
     cursor: pointer;
   }
 `;
 
-export default class Navbar extends React.Component {
+interface NavProps {
+  scrolled: boolean;
+}
+
+export default class Navbar extends React.Component<NavProps> {
   render() {
     return (
       <>
-        <NavWrapper>
-          <NavItems>
+        <NavWrapper scroll={this.props.scrolled}>
+          <NavItems scroll={this.props.scrolled}>
             <ScrollLink smooth={true} duration={500}>
               experience
             </ScrollLink>
@@ -70,7 +113,11 @@ export default class Navbar extends React.Component {
             <ScrollLink smooth={true} duration={500}>
               videos
             </ScrollLink>
-            <ExtLink target="_blank" href="./Henry_Trinh_Resume.pdf">
+            <ExtLink
+              scroll={this.props.scrolled}
+              target="_blank"
+              href="./Henry_Trinh_Resume.pdf"
+            >
               resume
             </ExtLink>
           </NavItems>
