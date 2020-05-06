@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Element } from "react-scroll";
 
 import Cover from "../components/cover";
 import Navbar from "../components/nav";
@@ -21,6 +22,11 @@ const MainWrapper = styled("div")`
   position: relative;
   bottom: 10vh;
   padding-bottom: 10vh;
+`;
+
+const AdjElem = styled(Element)`
+  position: relative;
+  bottom: 75px;
 `;
 
 export default class LandingPage extends React.Component<
@@ -56,6 +62,7 @@ export default class LandingPage extends React.Component<
           <Cover />
           <MainWrapper>
             <Fade />
+            <AdjElem name="exp" />
             <Experience />
           </MainWrapper>
         </PageWrapper>

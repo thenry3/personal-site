@@ -104,7 +104,7 @@ export default class Navbar extends React.Component<NavProps> {
       <>
         <NavWrapper scroll={this.props.scrolled}>
           <NavItems scroll={this.props.scrolled}>
-            <ScrollLink smooth={true} duration={500}>
+            <ScrollLink to="exp" smooth={true} duration={500}>
               experience
             </ScrollLink>
             <ScrollLink smooth={true} duration={500}>
