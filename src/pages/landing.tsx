@@ -33,7 +33,7 @@ export default class LandingPage extends React.Component<
   }
 
   scrollEvent() {
-    window.scrollY > 70
+    window.scrollY > 60
       ? this.setState({ scrolled: true })
       : this.setState({ scrolled: false });
   }

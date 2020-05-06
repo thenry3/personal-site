@@ -9,6 +9,11 @@ const ExpWrapper = styled("div")`
   padding-left: 30px;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 3px 8px;
   border-radius: 10px;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+    padding-left: 0px;
+    width: 85%;
+  }
 `;
 
 const LogoDiv = styled("img")`
@@ -18,14 +23,26 @@ const LogoDiv = styled("img")`
   align-self: center;
   margin-top: 30px;
   margin-bottom: 20px;
+  @media only screen and (max-width: 500px) {
+    min-width: 30%;
+    max-width: 30%;
+    margin-top: 20px;
+  }
 `;
 
 const ContentDiv = styled("div")`
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin: 30px 30px 20px;
   font-size: 14px;
+  @media only screen and (max-width: 500px) {
+    max-width: 100%;
+    margin: 10px;
+    margin-top: 0px;
+  }
+  @media only screen and (min-width: 501px) {
+    width: 100%;
+  }
 `;
 
 const CompDiv = styled("div")`
@@ -41,6 +58,7 @@ const Company = styled("div")`
   color: rgba(0, 0, 0, 0);
   font-weight: bold;
   font-size: 20px;
+  width: fit-content;
 `;
 
 const Dates = styled("div")`
@@ -58,6 +76,9 @@ const JobDesc = styled("ul")`
   width: 90%;
   & > li {
     margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding-left: 30px;
   }
 `;
 
