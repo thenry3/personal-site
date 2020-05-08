@@ -1,12 +1,12 @@
-import awslogo from "./aws.png";
-import vclalogo from "./vcla.png";
-import dblogo from "./db.png";
-import slampic from "./slam.png";
-import drugpic from "./drug.jpg";
-import tongitspic from "./tongits.png";
-import huntjobspic from "./huntjobs.svg";
-import learnpic from "./learn.png";
-import covidpic from "./covid.png";
+import awslogo from "./exps/aws.png";
+import vclalogo from "./exps/vcla.png";
+import dblogo from "./exps/db.png";
+import slampic from "./projs/slam.png";
+import drugpic from "./projs/drug.jpg";
+import tongitspic from "./projs/tongits.png";
+import huntjobspic from "./projs/huntjobs.svg";
+import learnpic from "./projs/learn.png";
+import covidpic from "./projs/covid.png";
 
 export var experiences = [
   {
