@@ -30,7 +30,7 @@ const ProjDiv = styled("div")`
   display: flex;
   flex-wrap: wrap;
   width: 85%;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
 
 export default class Projects extends React.Component {

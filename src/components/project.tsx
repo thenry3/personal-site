@@ -6,15 +6,17 @@ const ProjWrapper = styled("a")`
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 3px 10px;
   border-radius: 10px;
-  height: 350px;
+  height: 375px;
   width: 250px;
   background: white;
   text-decoration: none;
   transition: 0.2s;
   margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
   @media only screen and (min-width: 501px) {
     &:hover {
-      transform: translateY(-13px);
+      transform: translateY(-15px);
       box-shadow: rgba(0, 0, 0, 0.8) 1px 3px 13px;
     }
   }
@@ -73,14 +75,25 @@ interface ProjProps {
 }
 
 export default class Project extends React.Component<ProjProps> {
+  processDesc(desc: string) {
+    let arr = desc.split(" ");
+    let boldmode = false;
+    return arr.map((word) => {
+      if (word == "<em>") {
+        boldmode = !boldmode;
+        return <span></span>;
+      }
+      return boldmode ? <strong>{word} </strong> : <span>{word} </span>;
+    });
+  }
   render() {
     return (
       <>
-        <ProjWrapper target="_blank" href="/">
+        <ProjWrapper target="_blank" href={this.props.data.link}>
           <ProjPic pic={this.props.data.pic} />
           <DetsDiv>
             <ProjName>{this.props.data.title}</ProjName>
-            <ProjDesc>{this.props.data.desc}</ProjDesc>
+            <ProjDesc>{this.processDesc(this.props.data.desc)}</ProjDesc>
           </DetsDiv>
         </ProjWrapper>
       </>
