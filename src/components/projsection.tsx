@@ -11,7 +11,7 @@ const ProjectWrapper = styled("div")`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   padding-top: 30px;
   position: relative;
   background: linear-gradient(-200deg, #1d2b64, #f8cdda);
@@ -30,7 +30,7 @@ const ProjDiv = styled("div")`
   display: flex;
   flex-wrap: wrap;
   width: 85%;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 export default class Projects extends React.Component {

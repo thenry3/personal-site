@@ -52,7 +52,7 @@ export var projs = [
     title: "Drug Decider",
     pic: drugpic,
     desc:
-      "Website to help predict a patient's treatment response to anti-psychotics. In collaboration with the UCLA David Geffen School of Medicine.",
+      "Website to help predict a patient's treatment response to anti-psychotics based on PANSS scores. In collaboration with the UCLA David Geffen School of Medicine.",
     link: "https://drugdecider.org/",
   },
 ];

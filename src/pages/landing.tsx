@@ -14,7 +14,7 @@ const PageWrapper = styled("div")`
 
 const AdjElem = styled(Element)`
   position: relative;
-  bottom: 75px;
+  bottom: 60px;
 `;
 
 export default class LandingPage extends React.Component<

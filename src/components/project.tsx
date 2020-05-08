@@ -11,8 +11,12 @@ const ProjWrapper = styled("a")`
   background: white;
   text-decoration: none;
   transition: 0.2s;
-  &:hover {
-    transform: translateY(-13px);
+  margin-bottom: 30px;
+  @media only screen and (min-width: 501px) {
+    &:hover {
+      transform: translateY(-13px);
+      box-shadow: rgba(0, 0, 0, 0.8) 1px 3px 13px;
+    }
   }
 `;
 
