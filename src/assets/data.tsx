@@ -1,6 +1,8 @@
 import awslogo from "./aws.png";
 import vclalogo from "./vcla.png";
 import dblogo from "./db.png";
+import slampic from "./slam.png";
+import drugpic from "./drug.jpg";
 
 export var experiences = [
   {
@@ -10,6 +12,7 @@ export var experiences = [
     enddate: new Date(2020, 8),
     bullets: ["Will contribute in AWS Cryptography"],
     logo: awslogo,
+    link: "https://aws.amazon.com/",
   },
   {
     company: "UCLA VCLA",
@@ -20,6 +23,7 @@ export var experiences = [
       "Developing Social LSTM Model in Autonomous Simulations for path prediction and planning",
     ],
     logo: vclalogo,
+    link: "https://vcla.stat.ucla.edu/",
   },
   {
     company: "Daily Bruin",
@@ -32,5 +36,23 @@ export var experiences = [
       "Increased number of average users by 10% by improving mobile user experience in new interactive flat pages",
     ],
     logo: dblogo,
+    link: "https://dailybruin.com/",
+  },
+];
+
+export var projs = [
+  {
+    title: "SLAM Tool",
+    pic: slampic,
+    desc:
+      "Simulataneous Location and Mapping (SLAM). Generates 3D scene by plotting points in free space triangulated by features extracted from MP4's.",
+    link: "https://github.com/thenry3/3D-Mapping-from-Video/",
+  },
+  {
+    title: "Drug Decider",
+    pic: drugpic,
+    desc:
+      "Website to help predict a patient's treatment response to anti-psychotics. In collaboration with the UCLA David Geffen School of Medicine.",
+    link: "https://drugdecider.org/",
   },
 ];

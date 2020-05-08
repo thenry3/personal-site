@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ExpWrapper = styled("div")`
+const ExpWrapper = styled("a")`
   display: flex;
   width: 67%;
   margin-top: 30px;
@@ -9,10 +9,19 @@ const ExpWrapper = styled("div")`
   padding-left: 30px;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 3px 8px;
   border-radius: 10px;
+  text-decoration: none;
+  position: relative;
+  transition: 0.2s;
   @media only screen and (max-width: 500px) {
     flex-direction: column;
     padding-left: 0px;
     width: 85%;
+  }
+  @media only screen and (min-width: 501px) {
+    &:hover {
+      transform: translateX(15px);
+      box-shadow: rgba(0, 0, 0, 0.8) 1px 3px 10px;
+    }
   }
 `;
 
@@ -66,8 +75,8 @@ const Dates = styled("div")`
 `;
 
 const Position = styled("div")`
-  color: #999999;
-  font-weight: bold;
+  color: #484848;
+  /* font-weight: bold; */
   font-size: 15px;
 `;
 
@@ -90,6 +99,7 @@ interface ExpProps {
     enddate: Date;
     bullets: string[];
     logo: any;
+    link: any;
   };
 }
 
@@ -114,7 +124,7 @@ export default class Experience extends React.Component<ExpProps> {
     var end = this.props.data.enddate;
     return (
       <>
-        <ExpWrapper>
+        <ExpWrapper target="_blank" href={this.props.data.link}>
           <LogoDiv src={this.props.data.logo} />
           <ContentDiv>
             <CompDiv>

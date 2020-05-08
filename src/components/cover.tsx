@@ -28,11 +28,15 @@ const ProfPic = styled("div")`
   background-position-y: 18%;
   width: 300px;
   height: 300px;
+  @media only screen and (max-width: 500px) {
+    width: 260px;
+    height: 260px;
+  }
 `;
 
 const Title = styled("div")`
   color: white;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 70px;
   letter-spacing: 0.07em;
   margin-top: 10px;
@@ -89,7 +93,7 @@ export default class Cover extends React.Component {
         <CoverWrapper>
           <PicWrapper>
             <ProfPic />
-            <Title>Henry Trinh</Title>
+            <Title>henry trinh</Title>
             <Desc>i like peanut butter and trains</Desc>
             <ConCollection>
               <Contact

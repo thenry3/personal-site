@@ -10,6 +10,10 @@ const ExperienceWrapper = styled("div")`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 60px;
+  padding-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px 0px 30px;
+  position: relative;
 `;
 
 const EMainW = styled("div")`
@@ -23,7 +27,6 @@ const SecTitle = styled("div")`
   -webkit-background-clip: text;
   color: rgba(0, 0, 0, 0);
   width: fit-content;
-  font-weight: bold;
 `;
 
 export default class Experience extends React.Component {
@@ -32,7 +35,7 @@ export default class Experience extends React.Component {
       <>
         <ExperienceWrapper>
           <EMainW>
-            <SecTitle>Experience</SecTitle>
+            <SecTitle>experience</SecTitle>
           </EMainW>
           {exps.map((exp) => (
             <ExpComp data={exp}></ExpComp>

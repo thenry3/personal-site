@@ -34,13 +34,13 @@ const NavItems = styled("div")`
   }
   z-index: inherit;
   & > * {
-    background: ${(props) =>
+    /* background: ${(props) =>
       props.scroll
         ? "linear-gradient(90deg, #1d2b64 -50%, #f8cdda 120%)"
-        : "rgba(255, 255, 255, 0)"};
-    color: ${(props) => (props.scroll ? "rgba(255, 255, 255, 0)" : "white")};
-    ${(props) => (props.scroll ? "background-clip: text" : "")};
-    ${(props) => (props.scroll ? "-webkit-background-clip: text" : "")};
+        : "rgba(255, 255, 255, 0)"}; */
+    color: ${(props) => (props.scroll ? "rgb(99, 99, 99)" : "white")};
+    /* ${(props) => (props.scroll ? "background-clip: text" : "")};
+    ${(props) => (props.scroll ? "-webkit-background-clip: text" : "")}; */
     position: relative;
     &::before {
       content: "";
@@ -73,6 +73,10 @@ const ScrollLink = styled(Scroll.Link)`
   margin-right: 12px;
   padding: 10px 5px;
   font-size: 14px;
+  @media only screen and (max-width: 500px) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -88,6 +92,10 @@ const ExtLink = styled("a")`
   margin-right: 12px;
   padding: 10px 3px;
   font-size: 14px;
+  @media only screen and (max-width: 500px) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -107,11 +115,14 @@ export default class Navbar extends React.Component<NavProps> {
             <ScrollLink to="exp" smooth={true} duration={500}>
               experience
             </ScrollLink>
-            <ScrollLink smooth={true} duration={500}>
+            <ScrollLink to="proj" smooth={true} duration={500}>
               projects
             </ScrollLink>
             <ScrollLink smooth={true} duration={500}>
               videos
+            </ScrollLink>
+            <ScrollLink smooth={true} duration={500}>
+              friends
             </ScrollLink>
             <ExtLink
               scroll={this.props.scrolled}

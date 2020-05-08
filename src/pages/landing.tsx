@@ -5,23 +5,11 @@ import { Element } from "react-scroll";
 import Cover from "../components/cover";
 import Navbar from "../components/nav";
 import Experience from "../components/expsection";
+import Projects from "../components/projsection";
 
 const PageWrapper = styled("div")`
   width: 100%;
   height: 100vh;
-`;
-
-const Fade = styled("div")`
-  height: 10vh;
-  width: 100%;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-  position: relative;
-`;
-
-const MainWrapper = styled("div")`
-  position: relative;
-  bottom: 10vh;
-  padding-bottom: 10vh;
 `;
 
 const AdjElem = styled(Element)`
@@ -60,11 +48,10 @@ export default class LandingPage extends React.Component<
         <PageWrapper>
           <Navbar scrolled={this.state.scrolled} />
           <Cover />
-          <MainWrapper>
-            <Fade />
-            <AdjElem name="exp" />
-            <Experience />
-          </MainWrapper>
+          <AdjElem name="exp" />
+          <Experience />
+          <AdjElem name="proj" />
+          <Projects />
         </PageWrapper>
       </>
     );
