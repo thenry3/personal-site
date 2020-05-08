@@ -6,6 +6,7 @@ import drugpic from "./drug.jpg";
 import tongitspic from "./tongits.png";
 import huntjobspic from "./huntjobs.svg";
 import learnpic from "./learn.png";
+import covidpic from "./covid.png";
 
 export var experiences = [
   {
@@ -72,6 +73,13 @@ export var projs = [
     desc:
       "Android app that detects objects in a given picture and translate the English words generated to any language of the user's choosing.",
     link: "https://github.com/thenry3/learnPIC/",
+  },
+  {
+    title: "Covid Stories",
+    pic: covidpic,
+    desc:
+      "Platform built under the Daily Bruin at UCLA to allow students globally to share their stories and experiences during the COVID-19 pandemic.",
+    link: "https://covidstories.dailybruin.com/",
   },
   {
     title: "Hunt Jobs CLI",

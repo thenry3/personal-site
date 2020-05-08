@@ -4,6 +4,7 @@ import styled from "styled-components";
 const ExpWrapper = styled("a")`
   display: flex;
   width: 67%;
+  max-width: 820px;
   margin-top: 30px;
   box-sizing: border-box;
   padding-left: 30px;

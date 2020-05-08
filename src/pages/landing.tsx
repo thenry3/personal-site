@@ -6,6 +6,7 @@ import Cover from "../components/cover";
 import Navbar from "../components/nav";
 import Experience from "../components/expsection";
 import Projects from "../components/projsection";
+import Videos from "../components/vidsection";
 
 const PageWrapper = styled("div")`
   width: 100%;
@@ -52,6 +53,8 @@ export default class LandingPage extends React.Component<
           <Experience />
           <AdjElem name="proj" />
           <Projects />
+          <AdjElem name="vids" />
+          <Videos />
         </PageWrapper>
       </>
     );
