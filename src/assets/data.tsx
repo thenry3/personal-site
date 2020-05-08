@@ -89,3 +89,20 @@ export var projs = [
     link: "https://github.com/thenry3/Hunt-Jobs/",
   },
 ];
+
+export var videos = {
+  "How to make Avocado Smoothies!!":
+    "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to make Avoc Smoothies!!": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to make Avocado othies!!": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to make Avocado Smoos!!": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to make Avocado Smoothi": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to make Avocado Smoothie": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to make Avocado Smoothies": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to make Avocado Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to makeocado Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How toe Avocado Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "Howo make Avocado Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to make Avodo Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
+  "How to make AvocadSmoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
+};

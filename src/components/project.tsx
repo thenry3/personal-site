@@ -79,11 +79,17 @@ export default class Project extends React.Component<ProjProps> {
     let arr = desc.split(" ");
     let boldmode = false;
     return arr.map((word) => {
-      if (word == "<em>") {
+      if (word === "<em>") {
         boldmode = !boldmode;
         return <span></span>;
       }
-      return boldmode ? <strong>{word} </strong> : <span>{word} </span>;
+      return boldmode ? (
+        <u>
+          <strong>{word} </strong>
+        </u>
+      ) : (
+        <span>{word} </span>
+      );
     });
   }
   render() {

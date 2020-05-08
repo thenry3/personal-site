@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import VidDisplay from "./videodisplay";
+
 const VidsWrapper = styled("div")`
   width: 100%;
   display: flex;
@@ -30,6 +32,7 @@ export default class Vidsection extends React.Component {
           <div style={{ width: "83%" }}>
             <SecTitle>videos</SecTitle>
           </div>
+          <VidDisplay />
         </VidsWrapper>
       </>
     );
