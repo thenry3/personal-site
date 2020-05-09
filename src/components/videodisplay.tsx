@@ -132,11 +132,7 @@ const Frame = styled("div")`
   height: 0;
 `;
 
-var keys = [
-  "AIzaSyADw7w8Uc_DZ35ac1C5PKspE1BznHA1_38",
-  "AIzaSyB3w9RZuBhN8pVPGYCrTXU8ocmp5pJGO5U",
-  "AIzaSyD1Mm1MmYRC1l__6qWnSckZPZe0Gp2ob2g",
-];
+var keys = process.env.REACT_APP_YOUTUBE_KEYS.split(":");
 
 export default class VidDisplay extends React.Component<
   {},
