@@ -106,3 +106,18 @@ export var videos = {
   "How to make Avodo Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
   "How to make AvocadSmoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
 };
+
+// export var friends = (() => {
+//   let friendpaths = require.context("./friends", true, /\.(jpg|png|jpeg)$/);
+//   return friendpaths.keys().map((path) => friendpaths(path));
+// })();
+
+let friendpics = require.context("./friends", true, /\.(jpg|png|jpeg)$/);
+let friendpaths = friendpics.keys().map((path) => friendpics(path));
+
+let frends = [];
+for (var path in friendpaths) {
+  frends.push({ src: friendpaths[path], width: 4, height: 3 });
+}
+
+export var friends = frends;

@@ -110,7 +110,7 @@ const Vidtitle = styled("div")`
     bottom: 0;
     left: 10%;
     right: 0;
-    height: 3px;
+    height: 2px;
     margin-bottom: -8px;
     z-index: 2;
   }

@@ -37,8 +37,8 @@ export default class Experience extends React.Component {
           <EMainW>
             <SecTitle>experience</SecTitle>
           </EMainW>
-          {exps.map((exp) => (
-            <ExpComp data={exp}></ExpComp>
+          {exps.map((exp, index) => (
+            <ExpComp key={index} data={exp}></ExpComp>
           ))}
         </ExperienceWrapper>
       </>
