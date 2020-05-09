@@ -172,7 +172,7 @@ const Train = styled(WiTrain)`
     bottom: 20px;
   }
   @media only screen and (max-height: 600px) and (min-width: 1000px) {
-    bottom: 10px;
+    bottom: 0px;
   }
 `;
 
