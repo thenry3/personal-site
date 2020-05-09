@@ -80,6 +80,9 @@ const Title = styled("div")`
   @media only screen and (max-width: 400px) {
     font-size: 50px;
   }
+  @media only screen and (max-height: 600px) {
+    margin-top: 5px;
+  }
 `;
 
 const Desc = styled("div")`
@@ -161,6 +164,9 @@ const Train = styled(WiTrain)`
   }
   @media only screen and (max-height: 700px) {
     bottom: 50px;
+  }
+  @media only screen and (max-height: 600px) {
+    bottom: 20px;
   }
 `;
 
