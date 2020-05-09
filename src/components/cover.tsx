@@ -57,6 +57,10 @@ const ProfPic = styled("div")`
     width: 260px;
     height: 260px;
   }
+  @media only screen and (max-height: 730px) {
+    width: 260px;
+    height: 260px;
+  }
 `;
 
 const Title = styled("div")`
@@ -86,6 +90,9 @@ const PicWrapper = styled("div")`
   align-items: center;
   margin-bottom: 120px;
   @media only screen and (max-width: 500px) {
+    margin-bottom: 50px;
+  }
+  @media only screen and (max-height: 730px) {
     margin-bottom: 50px;
   }
 `;
@@ -134,6 +141,9 @@ const Train = styled(WiTrain)`
   animation-fill-mode: both;
   @media only screen and (max-width: 500px) {
     bottom: 90px;
+  }
+  @media only screen and (max-height: 730px) {
+    bottom: 70px;
   }
 `;
 
