@@ -137,60 +137,6 @@ const Train = styled(WiTrain)`
   }
 `;
 
-// const Yum = keyframes`
-// 0% {
-//   transform: rotateZ(90deg)
-// }
-// 50% {
-//   transform: rotateZ(0deg)
-// }
-// 100% {
-//   transform: rotateZ(90deg)
-// }`;
-
-// const Peanut = styled(GiPeanut)`
-//   color: white;
-//   width: 120px;
-//   height: auto;
-//   position: absolute;
-//   left: 200px;
-//   animation: ${Yum} 3s 0s infinite;
-//   animation-timing-function: linear;
-//   animation-fill-mode: both;
-//   bottom: 30vh;
-//   @media only screen and (max-width: 500px) {
-//     width: 0px;
-//     display: none;
-//   }
-// `;
-
-// const Yum1 = keyframes`
-// 0% {
-//   transform: rotateZ(90deg)
-// }
-// 50% {
-//   transform: rotateZ(180deg)
-// }
-// 100% {
-//   transform: rotateZ(90deg)
-// }`;
-
-// const Peanut1 = styled(GiPeanut)`
-//   color: white;
-//   width: 120px;
-//   height: auto;
-//   position: absolute;
-//   right: 200px;
-//   animation: ${Yum1} 3s 0s infinite;
-//   animation-timing-function: linear;
-//   animation-fill-mode: both;
-//   top: 25vh;
-//   @media only screen and (max-width: 500px) {
-//     width: 0px;
-//     display: none;
-//   }
-// `;
-
 export default class Cover extends React.Component {
   render() {
     return (
