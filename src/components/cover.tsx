@@ -8,7 +8,6 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 import { WiTrain } from "react-icons/wi";
-// import { GiPeanut } from "react-icons/gi";
 
 import mainpic from "../assets/main1.jpeg";
 
