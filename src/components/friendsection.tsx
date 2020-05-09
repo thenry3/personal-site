@@ -54,6 +54,9 @@ const Image = styled("img")`
   @media only screen and (max-width: 500px) {
     height: 150px;
   }
+  @media only screen and (max-width: 400px) {
+    height: 120px;
+  }
 `;
 
 export default class Friends extends React.Component<{}, { photos: any }> {
