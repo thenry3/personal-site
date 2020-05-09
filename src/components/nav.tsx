@@ -23,6 +23,10 @@ const NavWrapper = styled("div")`
   @media only screen and (max-width: 500px) {
     justify-content: center;
   }
+  @media only screen and (max-width: 400px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 `;
 
 const NavItems = styled("div")`
@@ -70,6 +74,10 @@ const ScrollLink = styled(Scroll.Link)`
     margin-left: 8px;
     margin-right: 8px;
   }
+  @media only screen and (max-width: 400px) {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -88,6 +96,10 @@ const ExtLink = styled("a")`
   @media only screen and (max-width: 500px) {
     margin-left: 8px;
     margin-right: 8px;
+  }
+  @media only screen and (max-width: 400px) {
+    margin-left: 4px;
+    margin-right: 4px;
   }
 
   &:hover {

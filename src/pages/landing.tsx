@@ -48,6 +48,10 @@ const GoUp = styled("div")`
     bottom: 45px;
     right: 45px;
   }
+  @media only screen and (max-width: 400px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export default class LandingPage extends React.Component<

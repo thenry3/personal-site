@@ -61,6 +61,10 @@ const ProfPic = styled("div")`
     width: 260px;
     height: 260px;
   }
+  @media only screen and (max-width: 400px) {
+    width: 230px;
+    height: 230px;
+  }
 `;
 
 const Title = styled("div")`
@@ -72,6 +76,9 @@ const Title = styled("div")`
   animation: ${Otherframe} 0.8s 1.2s both;
   @media only screen and (max-width: 500px) {
     font-size: 60px;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 50px;
   }
 `;
 
@@ -142,8 +149,18 @@ const Train = styled(WiTrain)`
   @media only screen and (max-width: 500px) {
     bottom: 90px;
   }
-  @media only screen and (max-height: 730px) {
+  @media only screen and (max-width: 400px) {
+    bottom: 30px;
+    width: 70px;
+  }
+  @media only screen and (max-width: 500px) {
+    bottom: 90px;
+  }
+  @media only screen and (max-height: 735px) {
     bottom: 70px;
+  }
+  @media only screen and (max-height: 700px) {
+    bottom: 50px;
   }
 `;
 
