@@ -151,6 +151,9 @@ const Train = styled(WiTrain)`
   animation: ${CHOOFUCKINGCHOO} 5s 0s infinite;
   animation-timing-function: linear;
   animation-fill-mode: both;
+  @media only screen and (min-width: 1000px) {
+    animation-duration: 6s;
+  }
   @media only screen and (max-width: 500px) {
     bottom: 90px;
   }
