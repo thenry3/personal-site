@@ -81,7 +81,7 @@ const Title = styled("div")`
     font-size: 50px;
   }
   @media only screen and (max-height: 600px) {
-    margin-top: 5px;
+    margin-top: 4px;
   }
 `;
 
@@ -104,6 +104,9 @@ const PicWrapper = styled("div")`
   }
   @media only screen and (max-height: 730px) {
     margin-bottom: 50px;
+  }
+  @media only screen and (max-height: 600px) {
+    margin-bottom: 30px;
   }
 `;
 
@@ -167,6 +170,9 @@ const Train = styled(WiTrain)`
   }
   @media only screen and (max-height: 600px) {
     bottom: 20px;
+  }
+  @media only screen and (max-height: 600px) and (min-width: 1000px) {
+    bottom: 10px;
   }
 `;
 
