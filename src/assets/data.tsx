@@ -89,35 +89,3 @@ export var projs = [
     link: "https://github.com/thenry3/Hunt-Jobs/",
   },
 ];
-
-export var videos = {
-  "How to make Avocado Smoothies!!":
-    "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to make Avoc Smoothies!!": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to make Avocado othies!!": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to make Avocado Smoos!!": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to make Avocado Smoothi": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to make Avocado Smoothie": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to make Avocado Smoothies": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to make Avocado Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to makeocado Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How toe Avocado Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "Howo make Avocado Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to make Avodo Smoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
-  "How to make AvocadSmoothies!": "https://www.youtube.com/embed/2PhrqDwZOLs",
-};
-
-// export var friends = (() => {
-//   let friendpaths = require.context("./friends", true, /\.(jpg|png|jpeg)$/);
-//   return friendpaths.keys().map((path) => friendpaths(path));
-// })();
-
-let friendpics = require.context("./friends", true, /\.(jpg|png|jpeg)$/);
-let friendpaths = friendpics.keys().map((path) => friendpics(path));
-
-let frends = [];
-for (var path in friendpaths) {
-  frends.push({ src: friendpaths[path], width: 4, height: 3 });
-}
-
-export var friends = frends;

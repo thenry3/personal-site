@@ -34,13 +34,7 @@ const NavItems = styled("div")`
   }
   z-index: inherit;
   & > * {
-    /* background: ${(props) =>
-      props.scroll
-        ? "linear-gradient(90deg, #1d2b64 -50%, #f8cdda 120%)"
-        : "rgba(255, 255, 255, 0)"}; */
     color: ${(props) => (props.scroll ? "rgb(99, 99, 99)" : "white")};
-    /* ${(props) => (props.scroll ? "background-clip: text" : "")};
-    ${(props) => (props.scroll ? "-webkit-background-clip: text" : "")}; */
     position: relative;
     &::before {
       content: "";
@@ -59,7 +53,6 @@ const NavItems = styled("div")`
       transition: 0.2s;
     }
     &:hover {
-      /* border-bottom: 3px solid white; */
       &::before {
         opacity: 1;
       }

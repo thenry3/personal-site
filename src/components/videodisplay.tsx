@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { videos as viddict } from "../assets/data";
-
 const MainWrapper = styled("div")`
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 3px 8px;
@@ -26,6 +24,7 @@ const Menu = styled("div")`
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
+  min-width: 200px;
   &:hover {
     overflow-y: auto;
   }
@@ -44,11 +43,12 @@ const MenuOption = styled("span")`
   color: #484848;
   font-size: 14px;
   text-align: center;
-  min-width: 160px;
+  min-width: 200px;
+  max-width: 200px;
   min-height: 50px;
   box-sizing: border-box;
-  padding-left: 13px;
-  padding-right: 13px;
+  padding-left: 30px;
+  padding-right: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,9 +132,15 @@ const Frame = styled("div")`
   height: 0;
 `;
 
+var keys = [
+  "AIzaSyADw7w8Uc_DZ35ac1C5PKspE1BznHA1_38",
+  "AIzaSyB3w9RZuBhN8pVPGYCrTXU8ocmp5pJGO5U",
+  "AIzaSyD1Mm1MmYRC1l__6qWnSckZPZe0Gp2ob2g",
+];
+
 export default class VidDisplay extends React.Component<
   {},
-  { selected: number; title: string }
+  { selected: number; title: string; videos: any }
 > {
   constructor(props) {
     super(props);
@@ -143,27 +149,59 @@ export default class VidDisplay extends React.Component<
   }
 
   componentWillMount() {
-    this.selectVid(0);
+    var success = false;
+    for (let j = 0; j < keys.length; j++) {
+      var youtube =
+        "https://www.googleapis.com/youtube/v3/search?key=" +
+        keys[j] +
+        "&channelId=UCfVO0QElfJ2bVFlZ6Su2bBQ&part=snippet,id&order=date&maxResults=50";
+      fetch(youtube)
+        .then((results) => results.json())
+        .then((results) => {
+          let tempdict = {};
+          results = results.items.reverse().slice(1);
+          for (let i = 0; i < results.length; i++) {
+            tempdict[results[i].snippet.title] =
+              "https://www.youtube.com/embed/" + results[i].id.videoId;
+          }
+          success = true;
+          return tempdict;
+        })
+        .then((dict) =>
+          this.setState({
+            videos: dict,
+            selected: 0,
+            title: Object.keys(dict)[0],
+          })
+        )
+        .catch((error) => console.log("rip api key " + j.toString()));
+      if (success) break;
+    }
   }
 
   selectVid(num: number) {
     this.setState({
       selected: num,
-      title: Object.keys(viddict)[num],
+      title: Object.keys(this.state.videos)[num],
     });
   }
 
   clickTitle(e) {
     this.selectVid(e.target.dataset.id);
-    // console.log(this.state.selected === e.target.dataset.id);
   }
 
   render() {
+    if (!this.state || !this.state.videos)
+      return (
+        <p>
+          sorry youtubes being bitchy today, it dont like a lot of api calls
+        </p>
+      );
     return (
       <>
         <MainWrapper>
           <Menu>
-            {Object.keys(viddict).map((title, index) => (
+            {Object.keys(this.state.videos).map((title, index) => (
               <MenuOption
                 data-id={index}
                 selected={index.toString() === this.state.selected.toString()}
@@ -186,7 +224,7 @@ export default class VidDisplay extends React.Component<
                     height: "100%",
                   }}
                   title={this.state.title}
-                  src={viddict[this.state.title]}
+                  src={this.state.videos[this.state.title]}
                 ></iframe>
               </Frame>
             </FrameContainer>

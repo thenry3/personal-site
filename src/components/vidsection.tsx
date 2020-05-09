@@ -31,6 +31,9 @@ export default class Vidsection extends React.Component {
         <VidsWrapper>
           <div style={{ width: "83%" }}>
             <SecTitle>videos</SecTitle>
+            <div style={{ color: "rgb(99, 99, 99)" }}>
+              videos made by the baboons, my lovely friends
+            </div>
           </div>
           <VidDisplay />
         </VidsWrapper>

@@ -32,10 +32,10 @@ const Gallery = styled("div")`
   box-shadow: rgba(0, 0, 0, 0.7) 1px 3px 20px;
   padding: 30px;
   height: 700px;
-  overflow-y: hidden;
-  &:hover {
-    overflow-y: auto;
-    padding-right: 15px;
+  max-height: 75vh;
+  overflow-y: auto;
+  @media only screen and (max-width: 500px) {
+    width: 90%;
   }
 `;
 
@@ -51,6 +51,9 @@ const Image = styled("img")`
   height: 200px;
   background: url(${(props) => props.src}) no-repeat;
   background-size: contain;
+  @media only screen and (max-width: 500px) {
+    height: 150px;
+  }
 `;
 
 export default class Friends extends React.Component<{}, { photos: any }> {
@@ -73,7 +76,6 @@ export default class Friends extends React.Component<{}, { photos: any }> {
   }
 
   render() {
-    // console.log(friends);
     return (
       <>
         <FriendWrapper>
