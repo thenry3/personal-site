@@ -149,34 +149,34 @@ export default class VidDisplay extends React.Component<
   }
 
   componentWillMount() {
-    // var success = false;
-    // for (let j = 0; j < keys.length; j++) {
-    //   var youtube =
-    //     "https://www.googleapis.com/youtube/v3/search?key=" +
-    //     keys[j] +
-    //     "&channelId=UCfVO0QElfJ2bVFlZ6Su2bBQ&part=snippet,id&order=date&maxResults=50";
-    //   fetch(youtube)
-    //     .then((results) => results.json())
-    //     .then((results) => {
-    //       let tempdict = {};
-    //       results = results.items.reverse().slice(1);
-    //       for (let i = 0; i < results.length; i++) {
-    //         tempdict[results[i].snippet.title] =
-    //           "https://www.youtube.com/embed/" + results[i].id.videoId;
-    //       }
-    //       success = true;
-    //       return tempdict;
-    //     })
-    //     .then((dict) =>
-    //       this.setState({
-    //         videos: dict,
-    //         selected: 0,
-    //         title: Object.keys(dict)[0],
-    //       })
-    //     )
-    //     .catch((error) => console.log("rip api key " + j.toString()));
-    //   if (success) break;
-    // }
+    var success = false;
+    for (let j = 0; j < keys.length; j++) {
+      var youtube =
+        "https://www.googleapis.com/youtube/v3/search?key=" +
+        keys[j] +
+        "&channelId=UCfVO0QElfJ2bVFlZ6Su2bBQ&part=snippet,id&order=date&maxResults=50";
+      fetch(youtube)
+        .then((results) => results.json())
+        .then((results) => {
+          let tempdict = {};
+          results = results.items.reverse().slice(1);
+          for (let i = 0; i < results.length; i++) {
+            tempdict[results[i].snippet.title] =
+              "https://www.youtube.com/embed/" + results[i].id.videoId;
+          }
+          success = true;
+          return tempdict;
+        })
+        .then((dict) =>
+          this.setState({
+            videos: dict,
+            selected: 0,
+            title: Object.keys(dict)[0],
+          })
+        )
+        .catch((error) => console.log("rip api key " + j.toString()));
+      if (success) break;
+    }
   }
 
   selectVid(num: number) {
