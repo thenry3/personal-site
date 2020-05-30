@@ -1,6 +1,6 @@
 .SILENT:
 
-DATE = `date +'%Y-%m-%d %H:%M:%S'`\n
+DATE = `date +'%Y-%m-%d %H:%M:%S'`
 
 MSG = Hi, I'm auto-generated. \
 	I was too lazy to write a message :)
@@ -28,7 +28,7 @@ update:
 	git diff --quiet > /dev/null 2>&1; \
 	if [ $$? -eq 1 ]; then \
 		git add .; \
-		git commit -m "$(DATE)$(MSG)"; \
+		git commit -m "$(DATE) $(MSG)"; \
 		git push; \
 		yarn build; \
 		firebase deploy; \
