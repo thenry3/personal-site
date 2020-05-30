@@ -61,34 +61,33 @@ const Image = styled("img")`
 
 export default class Friends extends React.Component<{}, { photos: any }> {
   componentWillMount() {
-    let friendpics = require.context(
-      "../assets/friends",
-      true,
-      /\.(jpg|png|jpeg|JPG|JPEG)$/
-    );
-    let friendpaths = friendpics.keys().map((path) => friendpics(path));
-
-    let frends = [];
-    for (var path in friendpaths) {
-      frends.push(friendpaths[path]);
-    }
-
-    this.setState({
-      photos: frends,
-    });
+    fetch("https://storage.googleapis.com/storage/v1/b/henry_personal_photos/o")
+      .then((results) => results.json())
+      .then((results) => results["items"])
+      .then((results) =>
+        this.setState({ photos: results.map((pic) => pic["name"]) })
+      )
+      .catch((error) => console.log("well fuck pictures broken lol\n" + error));
   }
 
   render() {
+    if (!this.state || !this.state.photos) return <p>loading good vibez :)</p>;
     return (
       <>
         <FriendWrapper>
           <div style={{ width: "83%" }}>
-            <SecTitle href="/">friends</SecTitle>
+            <SecTitle href="/">memories</SecTitle>
           </div>
           <Gallery>
             <ImageWrapper>
-              {this.state.photos.map((photo) => (
-                <Image src={photo} loading="lazy"></Image>
+              {this.state.photos.map((name) => (
+                <Image
+                  src={
+                    "https://storage.googleapis.com/henry_personal_photos/" +
+                    name
+                  }
+                  loading="lazy"
+                ></Image>
               ))}
             </ImageWrapper>
           </Gallery>
