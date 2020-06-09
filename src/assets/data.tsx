@@ -13,8 +13,10 @@ export var experiences = [
     company: "Amazon Web Services",
     title: "Software Development Engineer Intern",
     startdate: new Date(2020, 5),
-    enddate: new Date(2020, 8),
-    bullets: ["Will contribute in AWS Cryptography"],
+    enddate: null,
+    bullets: [
+      "Contributing in AWS Cryptography on the ACM PrivateCA team in Summer 2020",
+    ],
     logo: awslogo,
     link: "https://aws.amazon.com/",
   },
@@ -24,7 +26,9 @@ export var experiences = [
     startdate: new Date(2020, 3),
     enddate: null,
     bullets: [
-      "Developing Social LSTM Model in Autonomous Simulations for path prediction and planning",
+      "Researching deep learning under Professor Song-Chun Zhu for path planning and trajectory prediction in self-driving vehicles",
+      "Implemented LSTM neural network with social pooling to determine possible trajectories of human movement in dense crowds",
+      "Improved performance of data feed pipelines for neural networks by creating a tool to preprocess raw data into loadable binary files, preventing redundant calculations",
     ],
     logo: vclalogo,
     link: "https://vcla.stat.ucla.edu/",
@@ -33,7 +37,7 @@ export var experiences = [
     company: "Daily Bruin",
     title: "Lead Software Developer",
     startdate: new Date(2019, 3),
-    enddate: null,
+    enddate: new Date(2020, 6),
     bullets: [
       "Built database infrastructure and optimized database querying in API endpoints for multiple projects",
       "Constructed customizable components for the Daily Bruin Lux library, resulting in faster website development",
