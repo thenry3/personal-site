@@ -15,7 +15,9 @@ export var experiences = [
     startdate: new Date(2020, 5),
     enddate: null,
     bullets: [
-      "Contributing in AWS Cryptography on the ACM PrivateCA team in Summer 2020",
+      "Improved scalablility and performance for a console’s infrastructure by transferring it to serverless architecture",
+      "Built new pipeline for automated, progressive deployments of certificate manager service with automatic rollbacks",
+      "Implemented server logs and latency metrics using AWS CloudWatch"
     ],
     logo: awslogo,
     link: "https://aws.amazon.com/",
@@ -27,8 +29,8 @@ export var experiences = [
     enddate: null,
     bullets: [
       "Researching deep learning under Professor Song-Chun Zhu for path planning and trajectory prediction in self-driving vehicles",
-      "Implemented LSTM neural network with social pooling to determine possible trajectories of human movement in dense crowds",
-      "Improved performance of data feed pipelines for neural networks by creating a tool to preprocess raw data into loadable binary files, preventing redundant calculations",
+      "Developed LSTM neural network with social pooling to determine possible trajectories of human movement in dense crowds",
+      "Created tool to preprocess raw data into loadable binary files, improving data pipeline performance",
     ],
     logo: vclalogo,
     link: "https://vcla.stat.ucla.edu/",
