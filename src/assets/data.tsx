@@ -15,9 +15,9 @@ export var experiences = [
     startdate: new Date(2020, 5),
     enddate: null,
     bullets: [
-      "Improved scalablility and performance for a console’s infrastructure by transferring it to serverless architecture",
+      "Improved scalability and performance for a console’s infrastructure by transferring it to serverless architecture",
       "Built new pipeline for automated, progressive deployments of certificate manager service with automatic rollbacks",
-      "Implemented server logs and latency metrics using AWS CloudWatch"
+      "Implemented server logs and latency metrics using AWS CloudWatch",
     ],
     logo: awslogo,
     link: "https://aws.amazon.com/",
