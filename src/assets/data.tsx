@@ -1,3 +1,4 @@
+import teslalogo from "./exps/tesla.png";
 import awslogo from "./exps/aws.png";
 import vclalogo from "./exps/vcla.png";
 import dblogo from "./exps/db.png";
@@ -10,10 +11,19 @@ import covidpic from "./projs/covid.png";
 
 export var experiences = [
   {
+    company: "Tesla",
+    title: "Software Engineer Intern",
+    startdate: new Date(2020, 8),
+    enddate: null,
+    bullets: ["Infotainment UI team"],
+    logo: teslalogo,
+    link: "https://www.tesla.com",
+  },
+  {
     company: "Amazon Web Services",
     title: "Software Development Engineer Intern",
     startdate: new Date(2020, 5),
-    enddate: null,
+    enddate: new Date(2020, 8),
     bullets: [
       "Improved scalability and performance for a console’s infrastructure by transferring it to serverless architecture",
       "Built new pipeline for automated, progressive deployments of certificate manager service with automatic rollbacks",
