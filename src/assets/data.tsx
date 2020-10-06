@@ -1,15 +1,34 @@
 import teslalogo from "./exps/tesla.png";
 import awslogo from "./exps/aws.png";
 import vclalogo from "./exps/vcla.png";
-import dblogo from "./exps/db.png";
 import slampic from "./projs/slam.png";
 import drugpic from "./projs/drug.jpg";
 import tongitspic from "./projs/tongits.png";
 import huntjobspic from "./projs/huntjobs.svg";
 import learnpic from "./projs/learn.png";
 import covidpic from "./projs/covid.png";
+import snaplogo from "./exps/snap.png";
+import nurologo from "./exps/nuro.png";
 
 export var experiences = [
+  {
+    company: "Snap Inc.",
+    title: "Software Engineer Intern",
+    startdate: new Date(2021, 6),
+    enddate: null,
+    bullets: ["Boo!"],
+    logo: snaplogo,
+    link: "https://www.snap.com",
+  },
+  {
+    company: "Nuro",
+    title: "Software Engineer Intern",
+    startdate: new Date(2021, 3),
+    enddate: null,
+    bullets: ["Vroom vroom!"],
+    logo: nurologo,
+    link: "https://nuro.ai",
+  },
   {
     company: "Tesla",
     title: "Software Engineer Intern",
@@ -45,19 +64,19 @@ export var experiences = [
     logo: vclalogo,
     link: "https://vcla.stat.ucla.edu/",
   },
-  {
-    company: "Daily Bruin",
-    title: "Lead Software Developer",
-    startdate: new Date(2019, 3),
-    enddate: new Date(2020, 6),
-    bullets: [
-      "Built database infrastructure and optimized database querying in API endpoints for multiple projects",
-      "Constructed customizable components for the Daily Bruin Lux library, resulting in faster website development",
-      "Increased number of average users by 10% by improving mobile user experience in new interactive flat pages",
-    ],
-    logo: dblogo,
-    link: "https://dailybruin.com/",
-  },
+  // {
+  //   company: "Daily Bruin",
+  //   title: "Lead Software Developer",
+  //   startdate: new Date(2019, 3),
+  //   enddate: new Date(2020, 6),
+  //   bullets: [
+  //     "Built database infrastructure and optimized database querying in API endpoints for multiple projects",
+  //     "Constructed customizable components for the Daily Bruin Lux library, resulting in faster website development",
+  //     "Increased number of average users by 10% by improving mobile user experience in new interactive flat pages",
+  //   ],
+  //   logo: dblogo,
+  //   link: "https://dailybruin.com/",
+  // },
 ];
 
 export var projs = [
