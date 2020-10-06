@@ -25,7 +25,7 @@ export var experiences = [
     title: "Software Engineer Intern",
     startdate: new Date(2021, 3),
     enddate: null,
-    bullets: ["Vroom vroom!"],
+    bullets: ["Vroom!"],
     logo: nurologo,
     link: "https://nuro.ai",
   },
