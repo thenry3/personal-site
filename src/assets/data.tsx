@@ -10,15 +10,15 @@ import snaplogo from "./exps/snap.png";
 import nurologo from "./exps/nuro.png";
 
 export var experiences = [
-  {
-    company: "Snap Inc.",
-    title: "Software Engineer Intern",
-    startdate: new Date(2021, 6),
-    enddate: null,
-    bullets: ["Boo!"],
-    logo: snaplogo,
-    link: "https://www.snap.com",
-  },
+  // {
+  //   company: "Snap Inc.",
+  //   title: "Software Engineer Intern",
+  //   startdate: new Date(2021, 6),
+  //   enddate: null,
+  //   bullets: ["Boo!"],
+  //   logo: snaplogo,
+  //   link: "https://www.snap.com",
+  // },
   {
     company: "Nuro",
     title: "Software Engineer Intern",
