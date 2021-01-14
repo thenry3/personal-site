@@ -210,7 +210,11 @@ export default class VidDisplay extends React.Component<
             ))}
           </Menu>
           <Display>
-            <Vidtitle>{this.state.title}</Vidtitle>
+            <Vidtitle>
+              {this.state.title.replace(/&#(\d+);/g, function (match, dec) {
+                return String.fromCharCode(dec);
+              })}
+            </Vidtitle>
             <FrameContainer>
               <Frame>
                 <iframe
