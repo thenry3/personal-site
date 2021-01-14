@@ -221,7 +221,12 @@ export default class VidDisplay extends React.Component<
                     width: "100%",
                     height: "100%",
                   }}
-                  title={this.state.title}
+                  title={this.state.title.replace(
+                    /&#(\d+);/g,
+                    function (match, dec) {
+                      return String.fromCharCode(dec);
+                    }
+                  )}
                   src={this.state.videos[this.state.title]}
                 ></iframe>
               </Frame>
