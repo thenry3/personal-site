@@ -203,7 +203,9 @@ export default class VidDisplay extends React.Component<
                 selected={index.toString() === this.state.selected.toString()}
                 onClick={this.clickTitle}
               >
-                {title}
+                {title.replace(/&#(\d+);/g, function (match, dec) {
+                  return String.fromCharCode(dec);
+                })}
               </MenuOption>
             ))}
           </Menu>
