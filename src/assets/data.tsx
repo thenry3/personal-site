@@ -8,23 +8,33 @@ import learnpic from "./projs/learn.png";
 import covidpic from "./projs/covid.png";
 import snaplogo from "./exps/snap.png";
 import nurologo from "./exps/nuro.png";
+import twosigmalogo from "./exps/twosigma.png";
 
 export var experiences = [
-  // {
-  //   company: "Snap Inc.",
-  //   title: "Software Engineer Intern",
-  //   startdate: new Date(2021, 6),
-  //   enddate: null,
-  //   bullets: ["Boo!"],
-  //   logo: snaplogo,
-  //   link: "https://www.snap.com",
-  // },
+  {
+    company: "Snap Inc.",
+    title: "Software Engineer Intern",
+    startdate: new Date(2021, 9),
+    enddate: null,
+    bullets: ["spooky ghost"],
+    logo: snaplogo,
+    link: "https://www.snap.com",
+  },
+  {
+    company: "Two Sigma",
+    title: "Software Engineer Intern",
+    startdate: new Date(2021, 6),
+    enddate: null,
+    bullets: ["money printer goes brrr"],
+    logo: twosigmalogo,
+    link: "https://www.twosigma.com",
+  },
   {
     company: "Nuro",
     title: "Software Engineer Intern",
     startdate: new Date(2021, 3),
     enddate: null,
-    bullets: ["Where'd the driver go?"],
+    bullets: ["cute autonomous cars"],
     logo: nurologo,
     link: "https://nuro.ai",
   },
@@ -32,8 +42,8 @@ export var experiences = [
     company: "Tesla",
     title: "Software Engineer Intern",
     startdate: new Date(2020, 8),
-    enddate: null,
-    bullets: ["Haha car goes buzz"],
+    enddate: new Date(2020, 11),
+    bullets: ["fancy cars"],
     logo: teslalogo,
     link: "https://www.tesla.com",
   },
@@ -42,7 +52,7 @@ export var experiences = [
     title: "Software Development Engineer Intern",
     startdate: new Date(2020, 5),
     enddate: new Date(2020, 8),
-    bullets: ["Pretty cloud goes poof!"],
+    bullets: ["pretty clouds"],
     logo: awslogo,
     link: "https://aws.amazon.com/",
   },

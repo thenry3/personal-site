@@ -119,10 +119,13 @@ const months = [
   "Dec.",
 ];
 
+const seasons = ["Winter", "Spring", "Summer", "Fall"];
+
 export default class Experience extends React.Component<ExpProps> {
   render() {
     var start = this.props.data.startdate;
     var end = this.props.data.enddate;
+    var today = new Date();
     return (
       <>
         <ExpWrapper target="_blank" href={this.props.data.link}>
@@ -131,10 +134,21 @@ export default class Experience extends React.Component<ExpProps> {
             <CompDiv>
               <Company>{this.props.data.company}</Company>
               <Dates>
-                {months[start.getMonth()]} {start.getFullYear()} –{" "}
+                {today.getTime() >= start.getTime()
+                  ? months[start.getMonth()] +
+                    " " +
+                    start.getFullYear() +
+                    " – " +
+                    (end != null
+                      ? months[end.getMonth()] + " " + end.getFullYear()
+                      : "Present")
+                  : seasons[Math.floor(start.getMonth() / 3)] +
+                    " " +
+                    start.getFullYear()}
+                {/* {months[start.getMonth()]} {start.getFullYear()} –{" "}
                 {end != null
                   ? months[end.getMonth()] + " " + end.getFullYear()
-                  : "Present"}
+                  : "Present"} */}
               </Dates>
             </CompDiv>
             <Position>{this.props.data.title}</Position>
