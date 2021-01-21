@@ -60,14 +60,14 @@ export var experiences = [
 
 export var projs = [
   {
-    title: "SLAM Tool",
+    title: "SLAM tool",
     pic: slampic,
     desc:
       "<em> Simulataneous Location and Mapping (SLAM). <em> Generates 3D scene by plotting points in free space triangulated by features extracted from MP4's.",
     link: "https://github.com/thenry3/3D-Mapping-from-Video/",
   },
   {
-    title: "Tongits",
+    title: "tongits",
     pic: tongitspic,
     desc:
       "Android implementation of the Filipino card game, Tongits. Published on Google Play Store with <em> over 12,000 downloads.",
@@ -75,7 +75,7 @@ export var projs = [
       "https://play.google.com/store/apps/details?id=com.creativelabs.tongits&hl=en_US/",
   },
   {
-    title: "Drug Decider",
+    title: "drug decider",
     pic: drugpic,
     desc:
       "Website to help predict a patient's treatment response to anti-psychotics based on PANSS scores. In collaboration with the <em> UCLA David Geffen School of Medicine.",
@@ -89,14 +89,14 @@ export var projs = [
     link: "https://github.com/thenry3/learnPIC/",
   },
   {
-    title: "Covid Stories",
+    title: "covid stories",
     pic: covidpic,
     desc:
       "Platform built under the Daily Bruin at UCLA to allow students globally to share their stories and experiences during the COVID-19 pandemic.",
     link: "https://covidstories.dailybruin.com/",
   },
   {
-    title: "Hunt Jobs CLI",
+    title: "hunt jobs CLI",
     pic: huntjobspic,
     desc:
       "Command line tool that searches for job postings quickly and compiles them for you in any format. <em> Available to download for macOS and Windows.",
