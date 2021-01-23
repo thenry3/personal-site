@@ -29,6 +29,7 @@ const Name = styled("div")`
   color: #4f38a1;
   font-size: 48px;
   display: flex;
+  margin-bottom: 15px;
 `;
 
 const ItMe = styled("div")`
@@ -127,7 +128,8 @@ export default function Home() {
       <Wrapper>
         <NameWrapper>
           <Name>
-            {"henry trinh".split("").map((character, i) =>
+            henry trinh
+            {/* {"henry trinh".split("").map((character, i) =>
               character === " " ? (
                 <pre style={{ margin: "0" }}> </pre>
               ) : (
@@ -135,11 +137,19 @@ export default function Home() {
                   <strong>{character}</strong>
                 </Plx>
               )
-            )}
+            )} */}
           </Name>
 
-          <div style={{ display: "flex", top: "20px", position: "relative" }}>
-            {desc
+          <div
+            style={{
+              display: "flex",
+              top: "0px",
+              position: "relative",
+              marginBottom: "5px",
+            }}
+          >
+            {desc}
+            {/* {desc
               .split("")
               .map((character, i) =>
                 character === " " ? (
@@ -147,7 +157,7 @@ export default function Home() {
                 ) : (
                   <Plx parallaxData={descLetters[i]}>{character}</Plx>
                 )
-              )}
+              )} */}
           </div>
 
           <Contacts>
