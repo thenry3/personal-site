@@ -6,9 +6,6 @@ MSG = Hi, I'm auto-generated. \
 	I was too lazy to write a message :)
 
 resume:
-	# wget --no-check-certificate -r \
-	# 'https://drive.google.com/uc?export=download&id=14wVa6gwcjU1ZlMYS0Qf1Tii8mWchhY58' \
-	# -O ./public/Henry_Trinh_Resume1.pdf
 	wget --no-check-certificate -r \
 	'https://drive.google.com/uc?id=14wVa6gwcjU1ZlMYS0Qf1Tii8mWchhY58&authuser=0&export=download' \
 	-O ./public/Henry_Trinh_Resume1.pdf
