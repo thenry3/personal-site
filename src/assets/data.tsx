@@ -33,7 +33,7 @@ export var experiences = [
     company: "Nuro",
     title: "Software Engineer Intern",
     startdate: new Date(2021, 3),
-    enddate: null,
+    enddate: new Date(2021, 6),
     bullets: ["cute autonomous cars"],
     logo: nurologo,
     link: "https://nuro.ai",
@@ -62,44 +62,37 @@ export var projs = [
   {
     title: "SLAM tool",
     pic: slampic,
-    desc:
-      "<em> Simulataneous Location and Mapping (SLAM). <em> Generates 3D scene by plotting points in free space triangulated by features extracted from MP4's.",
+    desc: "<em> Simulataneous Location and Mapping (SLAM). <em> Generates 3D scene by plotting points in free space triangulated by features extracted from MP4's.",
     link: "https://github.com/thenry3/3D-Mapping-from-Video/",
   },
   {
     title: "tongits",
     pic: tongitspic,
-    desc:
-      "Android implementation of the Filipino card game, Tongits. Published on Google Play Store with <em> over 12,000 downloads.",
-    link:
-      "https://play.google.com/store/apps/details?id=com.creativelabs.tongits&hl=en_US/",
+    desc: "Android implementation of the Filipino card game, Tongits. Published on Google Play Store with <em> over 12,000 downloads.",
+    link: "https://play.google.com/store/apps/details?id=com.creativelabs.tongits&hl=en_US/",
   },
   {
     title: "drug decider",
     pic: drugpic,
-    desc:
-      "Website to help predict a patient's treatment response to anti-psychotics based on PANSS scores. In collaboration with the <em> UCLA David Geffen School of Medicine.",
+    desc: "Website to help predict a patient's treatment response to anti-psychotics based on PANSS scores. In collaboration with the <em> UCLA David Geffen School of Medicine.",
     link: "https://drugdecider.org/",
   },
   {
     title: "learnPIC",
     pic: learnpic,
-    desc:
-      "Android app that detects objects in a given picture and translate the English words generated to any language of the user's choosing.",
+    desc: "Android app that detects objects in a given picture and translate the English words generated to any language of the user's choosing.",
     link: "https://github.com/thenry3/learnPIC/",
   },
   {
     title: "covid stories",
     pic: covidpic,
-    desc:
-      "Platform built under the Daily Bruin at UCLA to allow students globally to share their stories and experiences during the COVID-19 pandemic.",
+    desc: "Platform built under the Daily Bruin at UCLA to allow students globally to share their stories and experiences during the COVID-19 pandemic.",
     link: "https://covidstories.dailybruin.com/",
   },
   {
     title: "hunt jobs CLI",
     pic: huntjobspic,
-    desc:
-      "Command line tool that searches for job postings quickly and compiles them for you in any format. <em> Available to download for macOS and Windows.",
+    desc: "Command line tool that searches for job postings quickly and compiles them for you in any format. <em> Available to download for macOS and Windows.",
     link: "https://github.com/thenry3/Hunt-Jobs/",
   },
 ];
