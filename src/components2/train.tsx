@@ -33,6 +33,22 @@ export default function Train() {
     },
   ];
 
+  const FillAnimation = [
+    {
+      start: "self",
+      startOffset: "10vh",
+      duration: "70vh",
+      properties: [
+        {
+          startValue: 0,
+          endValue: 100,
+          property: "width",
+          unit: "%",
+        },
+      ],
+    },
+  ];
+
   const TrackAnimations = [];
   for (let i = 0; i < numTracks; i++) {
     TrackAnimations.push([
@@ -61,12 +77,10 @@ export default function Train() {
   return (
     <>
       <div style={{ width: "80%" }}>
-        <Plx
-          parallaxData={Animation}
-          style={{ width: "85%", height: "fit-content" }}
-        >
+        <div style={{ display: "flex", width: "85%" }}>
+          <Plx parallaxData={FillAnimation}></Plx>
           <TheTrain />
-        </Plx>
+        </div>
         <Track>
           {TrackAnimations.map((track, i) =>
             i > 0 ? (

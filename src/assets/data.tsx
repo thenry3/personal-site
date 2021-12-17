@@ -14,8 +14,17 @@ export var experiences = [
   {
     company: "Snap Inc.",
     title: "Software Engineer Intern",
-    startdate: new Date(2021, 9),
+    startdate: new Date(2022, 0),
     enddate: null,
+    bullets: ["spooky ghost"],
+    logo: snaplogo,
+    link: "https://www.snap.com",
+  },
+  {
+    company: "Snap Inc.",
+    title: "Software Engineer Intern",
+    startdate: new Date(2021, 8),
+    enddate: new Date(2021, 11),
     bullets: ["spooky ghost"],
     logo: snaplogo,
     link: "https://www.snap.com",
